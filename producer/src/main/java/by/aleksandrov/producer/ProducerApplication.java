@@ -18,7 +18,7 @@ public class ProducerApplication {
 		MessageProducer producer = context.getBean(MessageProducer.class);
 		ApiService service = context.getBean(ApiServiceImpl.class);
 
-		service.getData(3).forEach(producer::sendMessage);
+		service.getData(50).forEach(producer::sendMessage);
 	}
 
 }
