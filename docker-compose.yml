@@ -57,3 +57,9 @@ services:
       - '39795:39795'
     depends_on:
       - kafka1
+  mongo:
+    image: mongo
+    volumes:
+      - /data/mongodb/db:/data/db
+    ports:
+      - "27017:27017"
